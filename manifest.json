@@ -2,7 +2,7 @@
   "name": "Grimório de Personagens",
   "short_name": "Personagens",
   "description": "Gerencie seus personagens com CRUD completo",
-  "start_url": "/index.html",
+  "start_url": "/Atividade-pwa/index.html",
   "display": "standalone",
   "background_color": "#0d0d1a",
   "theme_color": "#c9a84c",
