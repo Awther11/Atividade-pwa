@@ -1,4 +1,3 @@
-
 function getPersonagens() {
     return JSON.parse(localStorage.getItem("personagens") || "[]");
 }

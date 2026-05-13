@@ -1,11 +1,12 @@
-const CACHE_NAME = "atividade-pwa-v1";
+const CACHE_NAME = "atividade-pwa";
 const FILES_TO_CACHE = [
     "/Atividade-pwa/",
     "/Atividade-pwa/index.html",
     "/Atividade-pwa/css/style.css",
     "/Atividade-pwa/js/script.js",
     "/Atividade-pwa/js/scriptCRUD.js",
-    "/Atividade-pwa/manifest.json"
+    "/Atividade-pwa/manifest.json",
+    "/Atividade-pwa/icon.png"
 ];
 
 // Instala e faz cache dos arquivos

@@ -1,14 +1,15 @@
 class Personagem {
-    static idGlobal = parseInt(localStorage.getItem("idGlobalPersonagem") || "0");
-
     constructor(nome, descricao, caracteristica, idade) {
         this.nome = nome;
         this.descricao = descricao;
         this.caracteristica = caracteristica;
         this.idade = idade;
-        this.identifier = Personagem.idGlobal;
-        Personagem.idGlobal++;
-        localStorage.setItem("idGlobalPersonagem", Personagem.idGlobal);
+
+        // Lê o próximo ID diretamente do localStorage a cada instanciação,
+        // garantindo que reloads não causem IDs duplicados
+        const proximoId = parseInt(localStorage.getItem("idGlobalPersonagem") || "1");
+        this.identifier = proximoId;
+        localStorage.setItem("idGlobalPersonagem", proximoId + 1);
     }
 }
 
