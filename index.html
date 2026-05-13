@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personagens</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1a1a2e">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="parallax-bg" id="parallax-bg">
+        <canvas id="starfield"></canvas>
+    </div>
+
+    <header class="site-header">
+        <h1 class="site-title">⚔️ Grimório de Personagens</h1>
+        <p class="site-sub">Registre, explore e gerencie seus heróis</p>
+    </header>
+
+    <main class="main-content">
+
+        <section class="form-section" id="form-section">
+            <h2 class="section-title" id="form-title">Novo Personagem</h2>
+
+            <form id="registrar-personagem" novalidate>
+                <input type="hidden" id="editando-id" value="">
+
+                <div class="form-grid">
+                    <div class="field-group">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" placeholder="Ex: Arthas Menethil" autocomplete="off" required />
+                    </div>
+                    <div class="field-group">
+                        <label for="idade">Idade</label>
+                        <input type="text" id="idade" placeholder="Ex: 245 anos" autocomplete="off" />
+                    </div>
+                    <div class="field-group full-width">
+                        <label for="descricao">Descrição</label>
+                        <input type="text" id="descricao" placeholder="Breve descrição do personagem..." autocomplete="off" />
+                    </div>
+                    <div class="field-group full-width">
+                        <label for="caracteristica">Característica Principal</label>
+                        <input type="text" id="caracteristica" placeholder="Ex: Guerreiro das trevas, mestre da morte" autocomplete="off" />
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" id="salvar" class="btn btn-primary">Registrar Personagem</button>
+                    <button type="button" id="cancelar-edicao" class="btn btn-secondary" style="display:none">Cancelar</button>
+                </div>
+
+                <p class="form-error" id="form-error" style="display:none">⚠️ O nome do personagem é obrigatório.</p>
+            </form>
+        </section>
+
+        <section class="lista-section">
+            <div class="lista-header">
+                <h2 class="section-title">Personagens Registrados <span class="count-badge" id="count-badge">0</span></h2>
+                <input type="text" id="busca" placeholder="🔍 Buscar personagem..." class="busca-input" />
+            </div>
+
+            <div class="container-personagens" id="container-personagens">
+                <div class="empty-state" id="empty-state">
+                    <div class="empty-icon">📜</div>
+                    <p>Nenhum personagem registrado ainda.<br>Crie o primeiro acima!</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/script.js"></script>
+    <script src="js/scriptCRUD.js"></script>
+</body>
+</html>
